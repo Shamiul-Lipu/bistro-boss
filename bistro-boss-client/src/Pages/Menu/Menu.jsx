@@ -3,6 +3,7 @@ import Cover from "../Shared/Cover/Cover";
 import menuImg from '../../assets/menu/banner3.jpg'
 import useMenu from "../../Hooks/useMenu";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+import MenuCategory from "./MenuCategory/MenuCategory";
 
 const Menu = () => {
     const [menu] = useMenu();
@@ -12,6 +13,7 @@ const Menu = () => {
     const soup = menu.filter(item => item.category === 'soup')
     const offered = menu.filter(item => item.category === 'offered')
 
+    // console.log(offered)
     return (
         <div>
             <Helmet>
@@ -19,6 +21,9 @@ const Menu = () => {
             </Helmet>
             <Cover img={menuImg} title={"Our Menu"}></Cover>
             <SectionTitle subHeading={"Don't Miss Todays Offer"} heading={"Today's Offer"}></SectionTitle>
+            {/* todays offer */}
+            <MenuCategory items={offered}></MenuCategory>
+            {/*  */}
         </div>
     );
 };
