@@ -90,8 +90,8 @@ const Login = () => {
                                 <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
                             <p><small>New Here? <Link to="/signup" className='underline text-blue-600'>Create an account</Link> </small></p>
-                            <SocialLogin></SocialLogin>
                         </form>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
